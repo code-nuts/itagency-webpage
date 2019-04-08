@@ -165,7 +165,7 @@
 	}
 	.cta-img {
 		position: absolute;
-		top: -58%;
+        top: 0%; 
 		@media (max-width: 991px) {
 			display: none;
 		}
