@@ -2,3 +2,6 @@
     height: 205px;
     width: 308px;
 }
+.tp-widget-footer{
+    display: none !important;
+}
