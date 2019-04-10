@@ -16,6 +16,7 @@
 
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
+    <link rel="stylesheet" href="css/datetimerpicker.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -44,7 +45,7 @@
 						</ul>
 						<ul class="nav navbar-nav ml-auto">
 							<li class="nav-item">
-								<a href="index.html#services" class="primary-btn">Book a trip</a>
+								<a href="request-submit.html" class="primary-btn">Submit Request</a>
 							</li>
 <!--
 							<li class="nav-item">
@@ -80,9 +81,9 @@
 				<div class="banner_content">
 					<div class="page_link">
 						<a href="index.html">Home</a>
-						<a href="book-trip.html">Book a Trip</a>
+						<a href="book-trip.html">Request a Flight</a>
 					</div>
-					<h2>Book a Trip</h2>
+					<h2>Request a Flight</h2>
 				</div>
 			</div>
 		</div>
@@ -95,39 +96,55 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7 col-md-10">
 					<div class="trip-form-section">
-						<h1>Book a Trip <br>
+						<h1>Request a Flight <br>
 							for your next Tour</h1>
 						<form class="trip-form-area trip-page-form trip-form text-right" id="myForm" action="mail.html" method="post">
 							<div class="form-group col-md-12">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Hotels" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Hotels'">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Flights" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Flights'">
 							</div>
                             <div class="form-group col-md-12">
 								<div class="form-select">
 									<select>
-										<option value="1">Location</option>
-										<option value="1">London A</option>
-										<option value="1">London B</option>
-										<option value="1">London C</option>
-										<option value="1">London D</option>
+										<option value="1">Seat Type</option>
+										<option value="1">Economy</option>
+										<option value="1">Business</option>
+										<option value="1">First Class</option>
+										
 									</select>
 								</div>
 							</div>
 							
+							
 							<div class="form-group col-md-12">
-								<input type="email" class="form-control" id="email" name="email" placeholder="No of days" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'No of days'">
-							</div>
-							<div class="form-group col-md-12">
-								<div class="form-select">
-									<select>
-										<option value="none">No of rooms</option>
-										<option value="single">Single</option>
-										<option value="twin">Twin</option>
-										<option value="double">Double</option>
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input class="form-control" id="email" name="email" placeholder="Depart Date" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Depart Date'">
+                                    <span class="input-group-addon text-white m-2">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
 								
-									</select>
-								</div>
+							</div>
+                            <div class="form-group col-md-12">
+                                <div class='input-group date' id='datetimepicker2'>
+                                    <input class="form-control" id="email" name="email" placeholder="Arrive Date" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Arrive Depart'">
+                                    <span class="input-group-addon text-white m-2">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+								
+							</div>
+                            
+                            
+                            <div class="form-group col-md-12">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Airport Depart" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Airport Depart'">
+							</div>
+                            <div class="form-group col-md-12">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Airport Arrive" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Airport Arrive'">
 							</div>
 							
 							<div class="col-lg-12 text-center">
@@ -252,6 +269,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="js/bootstrap-datetime.js"></script>
+    <script type="text/javascript">
+        
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+            $('#datetimepicker2').datetimepicker();
+        });
+
+    </script>
 </body>
 
 </html>
