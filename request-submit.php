@@ -1,3 +1,14 @@
+<?php
+
+	if (isset($_POST['req_submit'])) {
+		print_r($_POST);
+	}
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -98,27 +109,28 @@
 					<div class="trip-form-section">
 						<h1>
 							Submit a request 24/7 - 365</h1>
-						<form class="trip-form-area trip-page-form trip-form text-right" id="myForm" action="mail.html" method="post">
+							<!-- id="myForm" removed from form -->
+						<form class="trip-form-area trip-page-form trip-form text-right" action="mail.php" method="post">
 							<div class="form-group col-md-12">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Full Name" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Full Name'">
+								 onblur="this.placeholder = 'Full Name'" required>
 							</div>
                             <div class="form-group col-md-12">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Mobile" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Mobile'">
+								<input type="text" class="form-control" id="name" name="mobile" placeholder="Mobile" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Mobile'" required>
 							</div>
                             <div class="form-group col-md-12">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Email" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Email'">
+								<input type="email" class="form-control" id="name" name="email" placeholder="Email" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Email'" required>
 							</div>
                             <div class="form-group col-md-12">
 								<div class="form-select">
-									<select>
-										<option value="1">Request Type</option>
-										<option value="1">Hotels Wintrade Event June 2019</option>
-										<option value="1">Flights</option>
-										<option value="1">Taxi's - Executive Cars</option>
-										<option value="1">Group Bookings</option>
+									<select required>
+										<option value="">Request Type</option>
+										<option value="Hotels Wintrade Event June 2019">Hotels Wintrade Event June 2019</option>
+										<option value="Flights">Flights</option>
+										<option value="Taxi's - Executive Cars">Taxi's - Executive Cars</option>
+										<option value="Group Bookings">Group Bookings</option>
 										
 									</select>
 								</div>
@@ -136,10 +148,10 @@
 							</div>
                             <div class="form-group col-md-12">
 								<div class="form-select">
-									<select>
-										<option value="1">Choose Service Type</option>
-										<option value="1">Contact me to handle my end to end trip</option>
-										<option value="1">Contact me for support on part of my trip</option>
+									<select name="service_type" required>
+										<option value="">Choose Service Type</option>
+										<option value="Contact me to handle my end to end trip">Contact me to handle my end to end trip</option>
+										<option value="Contact me for support on part of my trip">Contact me for support on part of my trip</option>
 <!--
 										<option value="1">Travel</option>
                                         <option value="1">Ticket & Event</option>
@@ -158,7 +170,7 @@
 							</div>
 							
 							<div class="col-lg-12 text-center">
-								<button class="primary-btn text-uppercase">Submit a Request</button>
+								<button type="submit" name="req_submit" class="primary-btn text-uppercase">Submit a Request</button>
 							</div>
 						</form>
 					</div>
