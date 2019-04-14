@@ -514,9 +514,14 @@ button:focus {
 /* Home Banner Area css
 ============================================================================================ */
 .home_banner_area {
-  background: url(../img/banner/wintrade_banner.jpeg) no-repeat;
-  background-size: 100%;    
-  min-height: 710px; }
+  background: url(../img/banner/wintrade_banner.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 700px;
+}
+  
   @media (max-width: 991px) {
     .home_banner_area {
       min-height: 650px; } }
@@ -526,6 +531,41 @@ button:focus {
   @media (max-width: 991px) {
     .home_banner_area .banner_inner {
       min-height: 650px; } }
+/*
+    @media (max-width:425px){
+        .home_banner_area{
+            background: url(../img/banner/wintrade_banner.jpeg) no-repeat;
+            background-size: contain;
+            background-position: center center;
+            
+            margin-bottom: -24% !important;
+            
+            min-height: 399px;
+        }
+    }
+    @media (max-width:375px){
+        .home_banner_area{
+            background: url(../img/banner/wintrade_banner.jpeg) no-repeat;
+            background-size: contain;
+            background-position: center center;
+            
+            margin-bottom: -24% !important;
+            
+            min-height: 357px;
+        }
+    }
+@media (max-width:320px){
+        .home_banner_area{
+            background: url(../img/banner/wintrade_banner.jpeg) no-repeat;
+            background-size: contain;
+            background-position: center center;
+            
+            margin-bottom: -32% !important;
+            
+            min-height: 350px;
+        }
+    }
+*/
   @media (max-width: 991px) {
     .home_banner_area .banner_inner .fullscreen {
       min-height: 650px !important; } }
