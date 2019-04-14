@@ -514,15 +514,15 @@ button:focus {
 /* Home Banner Area css
 ============================================================================================ */
 .home_banner_area {
-  background: url(../img/banner/home-banner.png) no-repeat center center;
-  background-size: cover;
-  min-height: 900px; }
+  background: url(../img/banner/wintrade_banner.jpeg) no-repeat;
+  background-size: 100%;    
+  min-height: 710px; }
   @media (max-width: 991px) {
     .home_banner_area {
       min-height: 650px; } }
   @media (max-width: 1199px) {
     .home_banner_area .banner_inner {
-      min-height: 900px; } }
+      min-height: 710px !important; } }
   @media (max-width: 991px) {
     .home_banner_area .banner_inner {
       min-height: 650px; } }
@@ -719,7 +719,7 @@ button:focus {
   background-size: cover;
   color: #000000;
   position: relative;
-  margin-top: 25px;
+  
   margin-bottom: 40px; }
   @media (max-width: 991px) {
     .cta-area {
